@@ -1,63 +1,14 @@
 {
-    "name": "veronalabs/rabbit",
-    "description": "A modern way of building WordPress plugins.",
-    "keywords": [
-        "wordpress",
-        "pressmodo",
-        "sematico",
-        "rabbit",
-        "framework"
-    ],
-    "homepage": "https://github.com/veronalabs/rabbit",
-    "license": "MIT",
-    "support": {
-        "issues": "https://github.com/veronalabs/rabbit/issues"
+    "name": "alireza-aiden/books-management",
+    "description": "A WordPress plugin for managing books",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4",
+        "veronalabs/rabbit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Rabbit\\": "src"
+            "BooksManagement\\": "src/"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Rabbit\\Tests\\": "tests"
-        }
-    },
-    "require": {
-        "php": ">=7.2",
-        "caseyamcl/configula": "^4.0",
-        "illuminate/database": "^8.61",
-        "illuminate/macroable": "^8.7",
-        "laminas/laminas-diactoros": "^2.5",
-        "laminas/laminas-escaper": "^2.7",
-        "laminas/laminas-form": "^3.0",
-        "laminas/laminas-i18n": "^2.11",
-        "laminas/laminas-view": "^2.11",
-        "league/container": "^3.3",
-        "symfony/finder": "^5.1",
-        "symfony/http-foundation": "^5.1",
-		"veronalabs/logger-wp": "^1.0"
-    },
-    "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-        "mikey179/vfsstream": "^1.6",
-        "phpunit/phpunit": "^10.0",
-        "symfony/var-dumper": "^5.1",
-        "wp-coding-standards/wpcs": "3.0"
-    },
-    "config": {
-        "bin-dir": "bin",
-        "sort-packages": true,
-        "preferred-install": {
-            "*": "dist"
-        },
-        "platform-check": false,
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
-    },
-    "scripts": {
-        "test": "bin/phpunit"
-    },
-    "prefer-stable": true
+    }
 }
