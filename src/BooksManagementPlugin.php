@@ -13,21 +13,10 @@ class BooksManagementPlugin extends Plugin
 {
     public function boot()
     {
-        $this->registerHooks();
         $this->registerPostTypes();
         $this->registerTaxonomies();
         $this->setupDatabase();
         $this->setupAdminPage();
-    }
-
-    private function registerHooks()
-    {
-        add_action('plugins_loaded', [$this, 'loadTextdomain']);
-    }
-
-    public function loadTextdomain()
-    {
-        load_plugin_textdomain('books-management', false, dirname(plugin_basename(__FILE__)) . '/languages/');
     }
 
     private function registerPostTypes()
