@@ -5,6 +5,7 @@
  * Description: A plugin for managing books in WordPress
  * Version:     1.0.0
  * Author:      Ali
+ * Author:      Ali
  * Author URI:  https://yourwebsite.com
  * Text Domain: books-management
  * Domain Path: /languages
