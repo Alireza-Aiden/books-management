@@ -1,0 +1,14 @@
+{
+    "name": "Alireza-Aiden/books-management",
+    "description": "A WordPress plugin for managing books",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4",
+        "veronalabs/rabbit": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BooksManagement\\": "src/"
+        }
+    }
+}
