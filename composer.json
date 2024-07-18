@@ -3,7 +3,7 @@
     "description": "A WordPress plugin for managing books",
     "type": "wordpress-plugin",
     "require": {
-        "veronalabs/rabbit": "^1.0"
+        "veronalabs/rabbit": "^1.4"
     },
     "autoload": {
         "psr-4": {
