@@ -2,38 +2,24 @@
 
 namespace BooksManagement\Admin;
 
-class AdminPage
-{
-    public function register()
-    {
-        add_action('admin_menu', [$this, 'addMenuPage']);
+class AdminPage {
+    public static function register() {
+        add_action('admin_menu', [__CLASS__, 'add_books_management_page']);
     }
 
-    public function addMenuPage()
-    {
+    public static function add_books_management_page() {
         add_menu_page(
-            __('Books Info', 'books-management'),
-            __('Books Info', 'books-management'),
+            __('Books Management', 'books-management'),
+            __('Books Management', 'books-management'),
             'manage_options',
-            'books-info',
-            [$this, 'renderPage'],
+            'books-management',
+            [__CLASS__, 'render_books_management_page'],
             'dashicons-book-alt',
-            6
+            20
         );
     }
 
-    public function renderPage()
-    {
-        if (!class_exists('WP_List_Table')) {
-            require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
-        }
-        $table = new BooksInfoTable();
-        $table->prepare_items();
-        ?>
-        <div class="wrap">
-            <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
-            <?php $table->display(); ?>
-        </div>
-        <?php
+    public static function render_books_management_page() {
+        echo '<div class="wrap"><h2>Books Management</h2><p>Here you can manage your books.</p></div>';
     }
 }

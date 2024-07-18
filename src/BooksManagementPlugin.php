@@ -9,7 +9,7 @@ use BooksManagement\Taxonomies\PublisherTaxonomy;
 use BooksManagement\Admin\AdminPage;
 use BooksManagement\Database\BooksTable;
 
-class BooksManagementPlugin extends Application{
+class BooksManagementPlugin extends Application {
     private $plugin_dir;
     private $plugin_file;
     private $app;
